@@ -17,7 +17,23 @@ export const putDb = async (content) => {
   console.log('database put');
 
   const jateDb = await openDB('jate', 'readwrite');
+
+  const tx = jateDb.transaction('jate', 1);
+
+  const store = tx.objectStore('jate');
+
+  const request = store.put({ content: content });
+
+  const result = await request;
+  console.log('database saved new', result);
+};
+
+export const getDb = async () => {
+  console.log('get from database');
+
+  const jateDb = await openDB('jate');
 }
+
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => console.error('getDb not implemented');
