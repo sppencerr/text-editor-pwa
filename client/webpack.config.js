@@ -19,6 +19,17 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'Contact Cards'
+      }),
+      new InjectManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'Contact Cards',
+        
+      })
+
       
     ],
 
