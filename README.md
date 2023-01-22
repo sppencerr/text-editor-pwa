@@ -1,4 +1,4 @@
-# Minka - Developers notes and questions forum
+# Text Editor PWA
   [![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://lbesson.mit-license.org/)
   ## Table of Contents
   * [Description](#description)
